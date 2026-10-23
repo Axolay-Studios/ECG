@@ -115,9 +115,9 @@ game.tick = async() => {
 
     try {
         if(player.dead) {
-            setCamera(0-player.death.x - player.w/2, 0-player.death.y  - player.h/2, 1)
+            setCamera(0-player.death.x - player.w/2, 0-player.death.y  - player.h/2, 0)
         } else {
-            setCamera((0-player.x - player.w/2 ) - player.xv*0, (0-player.y - player.h/2) - player.yv*0 , 1)
+            setCamera((0-player.x - player.w/2 ) - player.xv*0, (0-player.y - player.h/2) - player.yv*0 , 0)
         }
         limitCamPos()
 
@@ -314,12 +314,3 @@ const hasHWA = (() => {
 })();
 
 config.performance.background = hasHWA;
-
-
-
-/*            meow
-*     ∆   ∆
-*   ( • ω • )
-*  \ (     )
-*   \(     )  
-*/
